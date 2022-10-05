@@ -67,7 +67,7 @@ spotless {
 }
 
 jgitver {
-  autoIncrementPatch false;
+  autoIncrementPatch false
   nonQualifierBranches = "main,master"
 }
 
