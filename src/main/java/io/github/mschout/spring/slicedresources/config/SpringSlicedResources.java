@@ -15,6 +15,22 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 
 import java.util.List;
 
+/**
+ * JavaConfig class to register {@link SlicedResourcesAssembler} and
+ * {@link SlicedResourcesAssemblerArgumentResolver} beans.
+ *
+ * Usage:
+ *
+ * <pre>
+ * &#64;SpringBootApplication
+ * &#64;Import(SpringSlicedResources.class)
+ * public class Application {
+ * 	public static void main(String[] args) {
+ * 		SpringApplication.run(Application.class, args);
+ * 	}
+ * }
+ * </pre>
+ */
 @Configuration(proxyBeanMethods = false)
 public class SpringSlicedResources extends HateoasAwareSpringDataWebConfiguration {
 	private final Lazy<SlicedResourcesAssemblerArgumentResolver> slicedResourcesArgumentResolver;
