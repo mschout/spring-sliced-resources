@@ -68,7 +68,7 @@ public class Application {
 }
 ```
 
-And thats it.  Spring will be able to auto-inject `SlicedResourcesAssembler<T>` automatically for you, and you will
+And that's it.  Spring will be able to auto-inject `SlicedResourcesAssembler<T>` automatically for you, and you will
 have `SlicedModel` available.
 
 Hopefully eventually this gets merged upstream into core eventually.  I do have PR's open to submit this work upstream.

@@ -75,7 +75,7 @@ public class SlicedResourcesAssembler<T>
 
 	/**
 	 * Configures whether to always add {@code first} links to the {@link SlicedModel} *
-	 * created. Defaults to {@literal false} which means that {@code first} links onlys appear
+	 * created. Defaults to {@literal false} which means that {@code first} links only appear
 	 * in conjunction with {@code prev} and {@code next} links.
 	 *
 	 * @param forceFirstRel whether to always add {@code first} links to the
@@ -175,7 +175,7 @@ public class SlicedResourcesAssembler<T>
 	/**
 	 * Creates the {@link SlicedModel} to be equipped with pagination links downstream.
 	 *
-	 * @param resources the original slices's elements mapped into {@link RepresentationModel}
+	 * @param resources the original slice's elements mapped into {@link RepresentationModel}
 	 *     instances.
 	 * @param metadata the calculated {@link SliceMetadata}, must not be {@literal null}.
 	 * @param slice the original page handed to the assembler, must not be {@literal null}.

@@ -17,9 +17,7 @@ import java.util.List;
 
 /**
  * JavaConfig class to register {@link SlicedResourcesAssembler} and
- * {@link SlicedResourcesAssemblerArgumentResolver} beans.
- *
- * Usage:
+ * {@link SlicedResourcesAssemblerArgumentResolver} beans. Usage:
  *
  * <pre>
  * &#64;SpringBootApplication
