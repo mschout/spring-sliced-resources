@@ -11,9 +11,16 @@ plugins {
   id 'org.springframework.boot' version "$springBootVersion"
   id 'java-library'
   id 'idea'
-  id 'maven-publish'
+
+  // Plugins for publishing to Sonatype
   id 'signing'
+  id 'maven-publish'
+  id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
+
+  // Use git tags for versioning
   id 'fr.brouillard.oss.gradle.jgitver' version '0.10.0-rc03'
+
+  // Use spotless plugin to format code
   id 'com.diffplug.spotless' version '6.10.0' // code formatting
 }
 
@@ -100,6 +107,17 @@ publishing {
           url = "https://github.com/mschout/${repositoryName}/tree/master"
         }
       }
+    }
+  }
+}
+
+nexusPublishing {
+  repositories {
+    sonatype {
+      nexusUrl = uri("https://s01.oss.sonatype.org/service/local/")
+      snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+      username = System.getenv("OSSRH_USERNAME") ?: 'credentials'
+      password = System.getenv("OSSRH_PASSWORD") ?: 'credentials'
     }
   }
 }
