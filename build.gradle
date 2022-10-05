@@ -17,7 +17,6 @@ plugins {
   id 'com.diffplug.spotless' version '6.10.0' // code formatting
 }
 
-
 java {
   toolchain {
     languageVersion.set(JavaLanguageVersion.of(11))
