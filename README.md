@@ -44,7 +44,8 @@ This package bridges the gap for you.
 
 # Usage
 
-Add this library as a dependency to your application.
+Add this library as a dependency to your application.  I've published this to
+Maven Central so no special repositories needed or anything.
 
 For gradle:
 
