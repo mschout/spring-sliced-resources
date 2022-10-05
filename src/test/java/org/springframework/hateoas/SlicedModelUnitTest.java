@@ -56,16 +56,12 @@ class SlicedModelUnitTest {
 
 	@Test
 	void preventsNegativeSliceSize() {
-		assertThatIllegalArgumentException().isThrownBy(() -> {
-			new SliceMetadata(-1, 0);
-		});
+		assertThatIllegalArgumentException().isThrownBy(() -> new SliceMetadata(-1, 0));
 	}
 
 	@Test
 	void preventsNegativeSliceNumber() {
-		assertThatIllegalArgumentException().isThrownBy(() -> {
-			new SliceMetadata(0, -1);
-		});
+		assertThatIllegalArgumentException().isThrownBy(() -> new SliceMetadata(0, -1));
 	}
 
 	@Test
